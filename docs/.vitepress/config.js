@@ -4,6 +4,8 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: "irux-router",
   description: "A lightweight client-side router for React.",
+  base: "/irux-router/",
+  
   themeConfig: {
     nav: [
       {
@@ -100,7 +102,7 @@ export default defineConfig({
     socialLinks: [
       {
         icon: "github",
-        link: "https://github.com/iruxsan/irux-router"
+        link: "https://github.com/Mohammambassam/irux-router"
       }
     ],
 

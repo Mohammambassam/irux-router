@@ -1,7 +1,7 @@
 {
   "name": "irux-router",
   "private": false,
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "A lightweight client-side router for React",
   "type": "module",
   "main": "./dist/irux-router.cjs",

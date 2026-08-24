@@ -1,0 +1,51 @@
+{
+  "name": "irux-router",
+  "private": false,
+  "version": "0.2.1",
+  "description": "A lightweight client-side router for React",
+  "type": "module",
+  "main": "./dist/irux-router.cjs",
+  "module": "./dist/irux-router.js",
+  "exports": {
+    ".": {
+      "import": "./dist/irux-router.js",
+      "require": "./dist/irux-router.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "prepublishOnly": "npm run build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "keywords": [
+    "react",
+    "router",
+    "routing",
+    "navigation",
+    "history-api",
+    "irux-router"
+  ],
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.4",
+    "oxlint": "^1.75.0",
+    "vite": "^8.2.0",
+    "vitepress": "^1.6.4"
+  },
+  "license": "MIT"
+}

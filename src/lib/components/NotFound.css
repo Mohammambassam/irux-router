@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.not-found {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255, 0, 0, 0.16), transparent 35%),
+    linear-gradient(135deg, #050505, #0d0d0d 55%, #160000);
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.not-found::before,
+.not-found::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  opacity: 0.35;
+}
+
+.not-found::before {
+  width: 280px;
+  height: 280px;
+  background: #ff0000;
+  top: -100px;
+  right: -80px;
+}
+
+.not-found::after {
+  width: 220px;
+  height: 220px;
+  background: #8b0000;
+  bottom: -90px;
+  left: -60px;
+}
+
+.not-found_card {
+  width: 100%;
+  max-width: 620px;
+  padding: 56px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  border: 1px solid rgba(255, 0, 0, 0.25);
+  border-radius: 24px;
+  background: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.65),
+    0 0 40px rgba(255, 0, 0, 0.08);
+}
+
+.not-found_badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  margin-bottom: 22px;
+  border: 1px solid rgba(255, 0, 0, 0.35);
+  border-radius: 999px;
+  background: rgba(255, 0, 0, 0.08);
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.not-found h1 {
+  font-size: clamp(5rem, 18vw, 10rem);
+  line-height: 0.9;
+  font-weight: 900;
+  letter-spacing: -6px;
+  color: #ffffff;
+  text-shadow:
+    0 0 15px rgba(255, 0, 0, 0.35),
+    0 0 40px rgba(255, 0, 0, 0.2);
+}
+
+.not-found p {
+  margin-top: 24px;
+  color: #bdbdbd;
+  font-size: clamp(1rem, 3vw, 1.35rem);
+  line-height: 1.7;
+}
+
+.not-found_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  padding: 14px 28px;
+  border: 1px solid #ff2b2b;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff1f1f, #a90000);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 700;
+  box-shadow:
+    0 12px 30px rgba(255, 0, 0, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+.not-found_button:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ff3b3b, #d00000);
+  box-shadow:
+    0 18px 38px rgba(255, 0, 0, 0.32),
+    0 0 24px rgba(255, 0, 0, 0.18);
+}
+
+.not-found_button:active {
+  transform: translateY(0);
+}
+
+.not-found_button:focus-visible {
+  outline: 3px solid rgba(255, 80, 80, 0.45);
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .not-found_card {
+    padding: 42px 22px;
+    border-radius: 18px;
+  }
+
+  .not-found h1 {
+    letter-spacing: -3px;
+  }
+
+  .not-found_button {
+    width: 100%;
+  }
+}

@@ -113,7 +113,7 @@ export default defineConfig({
 
     outline: {
       level: [2,3],
-      label: "no this page"
+      label: "On this page"
     },
 
     docFooter: {

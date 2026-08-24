@@ -4,7 +4,7 @@ A lightweight client-side router built for React.
 
 **irux-router** provides a clean, predictable, and easy-to-use routing system for React applications. It supports both JSX-based routing and centralized route configuration with `createRoutes()`.
 
-> 📚 Full documentation: **https://your-docs-url**
+> 📚 Full documentation: **https://mohammambassam.github.io/irux-router/**
 
 ---
 
@@ -109,7 +109,7 @@ The complete documentation includes:
 - Examples
 - Changelog
 
-📖 **https://your-docs-url**
+📖 **https://mohammambassam.github.io/irux-router/**
 
 ---
 

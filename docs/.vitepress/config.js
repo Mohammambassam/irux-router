@@ -5,8 +5,21 @@ export default defineConfig({
   title: "irux-router",
   description: "A lightweight client-side router for React.",
   base: "/irux-router/",
-  
+
+  head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/png",
+        href: "/irux-router/favicon.png",
+      },
+    ],
+  ],
+
   themeConfig: {
+    logo: "/logo.png",
+
     nav: [
       {
         text: "Guide",
@@ -47,6 +60,15 @@ export default defineConfig({
             link: "/guide/quick-start",
           },
           {
+            text: "Features",
+            items: [
+              {
+                text: "Dynamic Routes",
+                link: "/features/dynamic-routes",
+              },
+            ]
+          },
+          {
             text: "Components",
             items: [
               {
@@ -67,7 +89,6 @@ export default defineConfig({
               },
             ],
           },
-
           {
             text: "Hooks",
             items: [
@@ -79,9 +100,12 @@ export default defineConfig({
                 text: "useLocation",
                 link: "/hooks/use-location",
               },
+              {
+                text: "useParams",
+                link: "/hooks/use-params",
+              },
             ],
           },
-
           {
             text: "Utilities",
             items: [
@@ -112,7 +136,7 @@ export default defineConfig({
     },
 
     outline: {
-      level: [2,3],
+      level: [2, 3],
       label: "On this page"
     },
 

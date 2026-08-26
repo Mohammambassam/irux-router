@@ -66,4 +66,4 @@ Open your browser and verify that navigation works correctly.
 
 Now that you've created your first application, continue to the component documentation to learn more about each part of the API.
 
-Continue to **[Router](../components/router.md)**.
+Continue to **[Features](../features/dynamic-routes.md)**.

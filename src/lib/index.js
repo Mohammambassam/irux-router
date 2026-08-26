@@ -7,3 +7,4 @@ export {createRoutes} from './utils/createRoutes';
 
 export {useLocation} from './hooks/useLocation';
 export {useNavigate} from './hooks/useNavigate';
+export {useParams} from './hooks/useParams';

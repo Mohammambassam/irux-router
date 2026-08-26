@@ -1,21 +1,39 @@
+import {matchPath} from '../utils/matchPath';
+import {ParamsContext} from '../context/ParamsContext';
+
 export default function RoutesRenderer({routes , pathname}){
-    const matchedRoute = routes.find(route => route.path === pathname);
-    const notFoundRoute = routes.find(route => route.path === "*");
+    let matchedRoute = null;
+    let matchedParams = {};
 
-    console.log({
-    routes,
-    pathname,
-    matchedRoute,
-    notFoundRoute,
-  });
-  
-    const selectedRoute = matchedRoute ?? notFoundRoute;
+    for(const route of routes){
+        if(route.path === "*"){
+            continue;
+        }
 
-    if(!selectedRoute){
-        return null;
+        const params = matchPath(route.path, pathname);
+
+        if(params !== null){
+            matchedRoute = route;
+            matchedParams = params;
+            break;
+        }
     }
 
-    const Component = selectedRoute.component;
+    const notFoundRoute = routes.find(route => route.path === "*");
 
-    return <Component />;
+    if(!matchedRoute){
+        matchedRoute = notFoundRoute;
+        matchedParams = {};
+    }
+
+    if(!matchedRoute) return null;
+    
+
+    const Component = matchedRoute.component;
+
+    return(
+        <ParamsContext.Provider value={matchedParams}>
+            <Component />
+        </ParamsContext.Provider>
+    )
 }

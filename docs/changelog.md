@@ -6,6 +6,28 @@ The format is based on **Keep a Changelog**, and this project follows **Semantic
 
 ---
 
+## [0.3.0] - 2026-08-26
+
+### Added
+
+- Added support for dynamic routes.
+- Added the `useParams()` hook.
+- Added route parameter matching.
+- Added the `ParamsContext` for route parameters.
+- Added parameter support for both JSX routes and the `routes` prop.
+- Added dynamic route documentation.
+
+### Changed
+
+- Improved the route matching engine.
+- Unified parameter handling across all routing APIs.
+- Improved route rendering performance for dynamic matching.
+- Updated documentation with dynamic routing examples.
+- Refactored route matching logic.
+- Improved internal routing architecture for future nested route support.
+
+---
+
 ## [0.2.0] - 2026-08-23
 
 ### Added

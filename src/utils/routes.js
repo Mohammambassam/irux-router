@@ -1,20 +1,21 @@
 import { createRoutes, NotFound } from "../lib";
 
 import Home from '../pages/Home';
-import Products from '../pages/Products';
+import User from '../pages/User';
 
-export const routes = createRoutes([
+const routes = createRoutes([
     {
         path: "/",
         component: Home
     },
     {
-        id: "products",
-        path: "/products",
-        component: Products
+        path: "/users/:id",
+        component: User
     },
     {
         path: "*",
         component: NotFound
     }
-])
+]);
+
+export default routes;

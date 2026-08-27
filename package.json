@@ -58,8 +58,5 @@
     "vitepress": "^1.6.4",
     "vitest": "^4.1.11"
   },
-  "license": "MIT",
-  "dependencies": {
-    "irux-router": "file:irux-router-0.2.3.tgz"
-  }
+  "license": "MIT"
 }
